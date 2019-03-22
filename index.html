@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .object{
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                margin: 5px;
+                box-sizing: border-box;
+            }
+
+            .object--red{ background: red; }
+            .object--green{ background: green; }
+            .object--blue{ background: blue; }
+
+            .object.found{
+                border: 1px solid white;
+                box-shadow: 0 0 5px black;
+            }
+
+            li.found{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="object object--red" id="OBJ1"></div>
+    <div class="object object--green" id="OBJ2"></div>
+    <div class="object object--blue" id="OBJ3"></div>
+
+    <ul>
+        <li data-value="1">Martelo do Thor</li>
+        <li data-value="2">Manopla do Thanos</li>
+    </ul>
+
+    <script type="text/javascript" src="objects.js"></script>
+    </body>
+</html>

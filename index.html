@@ -2,37 +2,36 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <style>
-            .object{
-                width: 100px;
-                height: 100px;
-                display: inline-block;
-                margin: 5px;
-                box-sizing: border-box;
-            }
-
-            .object--red{ background: red; }
-            .object--green{ background: green; }
-            .object--blue{ background: blue; }
-
-            .object.found{
-                border: 1px solid white;
-                box-shadow: 0 0 5px black;
-            }
-
-            li.found{
-                text-decoration: line-through;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <div class="object object--red" id="OBJ1"></div>
-    <div class="object object--green" id="OBJ2"></div>
-    <div class="object object--blue" id="OBJ3"></div>
+    <section class="layer">
+        <div class="object object--red" data-value="00" data-x="20" data-y="230"></div>
+        <div class="object object--red" data-value="00"></div>
+        <div class="object object--blue" data-value="00"></div>
+        <div class="object object--blue" data-value="00"></div>
+        <div class="object object--blue" data-value="00"></div>
+        <div class="object object--red" data-value="1"></div>
+        <div class="object object--green" data-value="00"></div>
+        <div class="object object--green" data-value="00"></div>
+        <div class="object object--blue" data-value="00"></div>
+        <div class="object object--green" data-value="2"></div>
+        <div class="object object--blue" data-value="00"></div>
+        <div class="object object--red" data-value="00"></div>
+        <div class="object object--red" data-value="00"></div>
+        <div class="object object--red" data-value="00"></div>
+        <div class="object object--green" data-value="00"></div>
+        <div class="object object--blue" data-value="00"></div>
+        <div class="object object--blue" data-value="3" data-x="1820" data-y="86dis0"></div>
+        <div class="object object--green" data-value="00"></div>
+    </section>
 
     <ul>
         <li data-value="1">Martelo do Thor</li>
         <li data-value="2">Manopla do Thanos</li>
+        <li data-value="3">Escudo do Capitão América</li>
     </ul>
 
     <script type="text/javascript" src="objects.js"></script>

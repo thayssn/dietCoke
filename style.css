@@ -1,0 +1,98 @@
+:root{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+body{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: Roboto, sans-serif;
+}
+
+.layer{
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.object{
+  pointer-events: all;
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  margin: 5px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.object--red{ background: red; }
+.object--green{ background: green; }
+.object--blue{ background: blue; }
+
+.object.found{
+  animation: shine .6s infinite alternate;
+  transform: scale(1.2);
+  z-index: 10;
+  box-shadow: 0 0 35px rgba(255,255,255,.6),0 0 5px rgba(255,255,255,.5)
+}
+
+ul{
+  max-width: 60%;
+  position: absolute;
+  bottom: 30px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: blue;
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li{
+  padding: 10px 5px;
+  margin: 0 10px;
+  color: white;
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+}
+
+
+li.found:after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  animation: strike 0.3s;
+  left: 0;
+  top: 50%;
+  background-color: white;
+}
+
+@keyframes strike{
+  from {
+    width: 1%;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes shine{
+  from{
+    box-shadow: 0 0 35px rgba(255,255,255,.6),0 0 5px rgba(255,255,255,1)
+  }
+  to{
+    box-shadow: 0 0 50px rgba(255,255,255,1),0 0 10px rgba(255,255,255,1)
+  }
+}
